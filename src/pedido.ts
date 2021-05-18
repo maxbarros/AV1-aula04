@@ -1,3 +1,4 @@
+import { Produto } from "./produto";
 
 export class Pedido
 {
@@ -13,8 +14,9 @@ export class Pedido
         this.detalhes = detalhes;
         this.statusEnvio = statusEnvio;
     }
+
     confirmarRecebimento()
     {
-
+        this.statusEnvio = 'Entregue';
     }
 }

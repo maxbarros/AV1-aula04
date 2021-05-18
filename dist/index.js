@@ -1,9 +1,17 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var cliente_1 = require("./src/cliente");
+var carrinho_1 = require("./src/carrinho");
+var produto_1 = require("./src/produto");
+var pedido_1 = require("./src/pedido");
 var Max = new cliente_1.Cliente(12345, 'maxmax1234', 'conectado', 'Max_Barros_ds', 97984546555, 'maxbds@gmail.com', 'Rua 6 nº77, Bairro Centro, Manaus-AM');
 console.log(Max);
+Max.login();
 Max.verifLogin();
-/* let carrinho1: Carrinho = new Carrinho(1);
-carrinho1.produtos[carrinho1.quantidade] = new Produto('Cel', 'telefone movel');
- */
+var carrinho1 = new carrinho_1.Carrinho(1);
+carrinho1.produtos[carrinho1.quantidade] = new produto_1.Produto('Cel', 'telefone movel');
+console.log(carrinho1);
+var pedido1 = new pedido_1.Pedido(13234, 79.99, 'pedido feito em 18/05/2021, rastreamento: AB343556', 'Em processamento');
+console.log(pedido1);
+pedido1.confirmarRecebimento();
+console.log(pedido1);

@@ -21,6 +21,7 @@ export class Cliente extends Usuario
     {
 
     }
+    
     login()
     {
 
@@ -28,6 +29,6 @@ export class Cliente extends Usuario
 
     editarPerfil()
     {
-        
+    
     }
 }

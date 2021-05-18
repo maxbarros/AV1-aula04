@@ -9,6 +9,7 @@ var Pedido = /** @class */ (function () {
         this.statusEnvio = statusEnvio;
     }
     Pedido.prototype.confirmarRecebimento = function () {
+        this.statusEnvio = 'Entregue';
     };
     return Pedido;
 }());
