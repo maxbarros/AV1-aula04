@@ -28,13 +28,10 @@ var Cliente = /** @class */ (function (_super) {
         return _this;
     }
     Cliente.prototype.efetuarCadastro = function () {
-        console.log('Cadastro efetuado com sucesso');
     };
     Cliente.prototype.login = function () {
-        console.log('Login efetuado com sucesso!');
     };
     Cliente.prototype.editarPerfil = function () {
-        console.log('Perfil Atualizado');
     };
     return Cliente;
 }(usuario_1.Usuario));
