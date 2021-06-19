@@ -8,12 +8,6 @@ var Usuario = /** @class */ (function () {
         this.statusLogin = status;
     }
     Usuario.prototype.verifLogin = function () {
-        if (this.statusLogin == 'conectado') {
-            return true;
-        }
-        else {
-            return false;
-        }
     };
     return Usuario;
 }());

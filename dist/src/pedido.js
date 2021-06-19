@@ -1,15 +1,16 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Pedido = void 0;
+var observer_1 = require("./observer");
 var Pedido = /** @class */ (function () {
-    function Pedido(numPedido, preco, detalhes, statusEnvio) {
+    function Pedido(numPedido, preco, detalhes) {
+        this.statusEnvio = new observer_1.Subject();
         this.numPedido = numPedido;
         this.preco = preco;
         this.detalhes = detalhes;
-        this.statusEnvio = statusEnvio;
     }
     Pedido.prototype.confirmarRecebimento = function () {
-        this.statusEnvio = 'Entregue';
+        this.statusEnvio.setState("Recebido pelo destinatário");
     };
     return Pedido;
 }());

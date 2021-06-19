@@ -14,14 +14,8 @@ export class Usuario
         this.statusLogin = status
     }
 
-    verifLogin(): boolean
+    verifLogin()
     {
-        if(this.statusLogin == 'conectado')
-        {
-            return true;
-        }else
-            {
-                return false;
-            }
+   
     }
 }

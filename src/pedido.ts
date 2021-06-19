@@ -1,22 +1,18 @@
-import { Produto } from "./produto";
+import { Subject } from "./observer";
 
-export class Pedido
-{
+export class Pedido {
     numPedido: number;
     preco: number;
     detalhes: String;
-    statusEnvio: String;
+    statusEnvio = new Subject();
 
-    constructor(numPedido: number, preco: number, detalhes:String, statusEnvio: String)
-    {
+    constructor(numPedido: number, preco: number, detalhes: String) {
         this.numPedido = numPedido;
         this.preco = preco;
         this.detalhes = detalhes;
-        this.statusEnvio = statusEnvio;
     }
 
-    confirmarRecebimento()
-    {
-        this.statusEnvio = 'Entregue';
+    confirmarRecebimento() {
+        this.statusEnvio.setState("Recebido pelo destinatário")
     }
 }
