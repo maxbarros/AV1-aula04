@@ -1,17 +1,14 @@
 import { Produto } from "./produto";
 
- export class Carrinho
-{
+export class Carrinho {
     produtos: Produto[] = [];
     quantidade: number;
 
-    constructor(quant: number)
-    {
+    constructor(quant: number) {
         this.quantidade = quant;
     }
 
-    efetuarCompra()
-    {
- 
+    efetuarCompra() {
+        console.log("Compra concluida");
     }
 }

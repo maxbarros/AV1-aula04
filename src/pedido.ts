@@ -1,10 +1,10 @@
 import { Subject } from "./observer";
 
 export class Pedido {
-    numPedido: number;
-    preco: number;
-    detalhes: String;
-    statusEnvio = new Subject();
+    private numPedido: number;
+    private preco: number;
+    private detalhes: String;
+    public statusEnvio = new Subject();
 
     constructor(numPedido: number, preco: number, detalhes: String) {
         this.numPedido = numPedido;
@@ -12,7 +12,7 @@ export class Pedido {
         this.detalhes = detalhes;
     }
 
-    confirmarRecebimento() {
-        this.statusEnvio.setState("Recebido pelo destinatário")
+    public confirmarRecebimento() {
+        this.statusEnvio.setState("Objeto recebido pelo destinatário")
     }
 }

@@ -10,7 +10,7 @@ var Pedido = /** @class */ (function () {
         this.detalhes = detalhes;
     }
     Pedido.prototype.confirmarRecebimento = function () {
-        this.statusEnvio.setState("Recebido pelo destinatário");
+        this.statusEnvio.setState("Objeto recebido pelo destinatário");
     };
     return Pedido;
 }());

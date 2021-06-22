@@ -19,19 +19,22 @@ exports.Cliente = void 0;
 var usuario_1 = require("./usuario");
 var Cliente = /** @class */ (function (_super) {
     __extends(Cliente, _super);
-    function Cliente(idUsuario, senha, statusLogin, nomeCliente, telefone, email, endereco) {
+    function Cliente(idUsuario, senha, statusLogin, nome, telefone, email, endereco) {
         var _this = _super.call(this, idUsuario, senha, statusLogin) || this;
-        _this.nomeCliente = nomeCliente;
+        _this.nomeCliente = nome;
         _this.telefone = telefone;
         _this.email = email;
         _this.endereco = endereco;
         return _this;
     }
     Cliente.prototype.efetuarCadastro = function () {
+        console.log("Cadastro Concluído");
     };
     Cliente.prototype.login = function () {
+        console.log("Login efetuado");
     };
     Cliente.prototype.editarPerfil = function () {
+        console.log("Perfil Atualizado");
     };
     return Cliente;
 }(usuario_1.Usuario));

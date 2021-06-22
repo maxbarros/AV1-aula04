@@ -1,34 +1,30 @@
 import { Usuario } from "./usuario";
 
 
-export class Cliente extends Usuario
-{
-    nomeCliente: String;
-    telefone: number;
-    email: String;
-    endereco: String;
+export class Cliente extends Usuario {
+    private nomeCliente: String;
+    private telefone: number;
+    private email: String;
+    private endereco: String;
 
-    constructor(idUsuario: number,senha: String,statusLogin: String, nomeCliente: String, telefone: number, email: String, endereco: String)
-    {
-        super(idUsuario,senha,statusLogin);
-        this.nomeCliente = nomeCliente;
+    constructor(idUsuario: number, senha: String, statusLogin: String,
+        nome: String, telefone: number, email: String, endereco: String) {
+        super(idUsuario, senha, statusLogin);
+        this.nomeCliente = nome;
         this.telefone = telefone;
         this.email = email;
         this.endereco = endereco;
-    
-    }
-    efetuarCadastro()
-    {
 
     }
-    
-    login()
-    {
-
+    public efetuarCadastro() {
+        console.log("Cadastro Concluído");
     }
 
-    editarPerfil()
-    {
-    
+    public login() {
+        console.log("Login efetuado")
+    }
+
+    public editarPerfil() {
+        console.log("Perfil Atualizado");
     }
 }

@@ -1,21 +1,16 @@
-import { Cliente } from "./cliente";
-
-export class Usuario
-{
-    idUsuario: number;
-    senha: String;
-    statusLogin: String;
+export class Usuario {
+    private idUsuario: number;
+    private senha: String;
+    private statusLogin: String;
 
 
-    constructor(id: number, senha: String, status: String)
-    {
+    constructor(id: number, senha: String, status: String) {
         this.idUsuario = id;
         this.senha = senha;
         this.statusLogin = status
     }
 
-    verifLogin()
-    {
-   
+    public verifLogin() {
+
     }
 }

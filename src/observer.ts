@@ -1,4 +1,3 @@
-
 export class Subject {
     state!: string;
     observerList: Observer[] = [];
@@ -16,7 +15,9 @@ export class Subject {
     addObserver(observer: Observer) {
         this.observerList.push(observer);
     }
-
+    removeObserver(observer: Observer) {
+        this.observerList.splice(this.observerList.indexOf(observer), 1);
+    }
     notifyObservers(): void {
         for (let obs of this.observerList) {
             obs.update();

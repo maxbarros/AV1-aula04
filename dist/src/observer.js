@@ -15,6 +15,9 @@ var Subject = /** @class */ (function () {
     Subject.prototype.addObserver = function (observer) {
         this.observerList.push(observer);
     };
+    Subject.prototype.removeObserver = function (observer) {
+        this.observerList.splice(this.observerList.indexOf(observer), 1);
+    };
     Subject.prototype.notifyObservers = function () {
         for (var _i = 0, _a = this.observerList; _i < _a.length; _i++) {
             var obs = _a[_i];

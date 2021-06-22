@@ -7,6 +7,7 @@ var Carrinho = /** @class */ (function () {
         this.quantidade = quant;
     }
     Carrinho.prototype.efetuarCompra = function () {
+        console.log("Compra concluida");
     };
     return Carrinho;
 }());

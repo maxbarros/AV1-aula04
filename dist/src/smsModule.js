@@ -17,6 +17,14 @@ var __extends = (this && this.__extends) || (function () {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.SMSModule = void 0;
 var observer_1 = require("./observer");
+/*Aqui crio uma subclasse de Observer.
+Essa subclasse pode ser entendida como um
+tipo específico de Assinante
+
+este Assinante pode receber um Publucador
+como parâmeto, ou seja, este assinante será
+adicionado à lista de Assinantes do Publicador
+passado como parâmetro*/
 var SMSModule = /** @class */ (function (_super) {
     __extends(SMSModule, _super);
     function SMSModule(subject) {
@@ -25,8 +33,9 @@ var SMSModule = /** @class */ (function (_super) {
         _this.subject.addObserver(_this);
         return _this;
     }
+    //Função de atualização para este assinante
     SMSModule.prototype.update = function () {
-        console.log("O Status do seu pedido foi atualizado: ", this.subject.getState());
+        console.log("Novo SMS: O Status do seu pedido foi atualizado: ", this.subject.getState());
     };
     return SMSModule;
 }(observer_1.Observer));
